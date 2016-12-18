@@ -1,0 +1,43 @@
+
+<div class="m-mostRecent ">
+  <div  class="toggle-btn mostRecent-nav">
+        <img src="assets/images/nav01.png" class="nav01">
+        <img src="assets/images/nav01.png" class="nav02">
+        <img src="assets/images/nav01.png" class="nav03">
+    </div>
+
+    <div class="mostRecent-body" id="">
+
+        <ul class="ul frame-bg" id="mostRecent-wrapper" >
+            <li class="left item-box">
+                <ul>
+                    <li class="item half item-go" data-index="{{leftCase.order}}"  ng-repeat="leftCase in MostRecentCtrl.caseList[0]" on-last-repeat>
+                        <div class="item-img"><img ng-src="{{URLS.BASE + leftCase.caseStudiesThumbSrc}}" width="100%"></div>
+                        <!--<div class="item-img" style="background: #ffcc00">&nbsp;</div>-->
+                        <div class="bg"></div>
+                        <ul>
+                            <li class="item-hd ">{{leftCase.type}}</li>
+                            <li class="item-bd" ng-bind-html="leftCase.title | to_trusted"></li>
+                            <li class="item-ft" ng-bind-html="leftCase.body | to_trusted"></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="right item-box">
+                <ul>
+                    <li class="item half item-go" data-index="{{rightCase.order}}" ng-repeat="rightCase in MostRecentCtrl.caseList[1]" on-last-repeat>
+                        <div class="item-img"><img ng-src="{{URLS.BASE + rightCase.caseStudiesThumbSrc}}" width="100%"></div>
+                        <div class="bg"></div>
+                        <ul>
+                            <li class="item-hd ">{{rightCase.type}}</li>
+                            <li class="item-bd" ng-bind-html="rightCase.title | to_trusted"></li>
+                            <li class="item-ft" ng-bind-html="rightCase.body | to_trusted"></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+        <p class="copyright fz10Regular">© 2015 SISOBRAND.COM</p>
+    </div>
+</div>
